@@ -1686,7 +1686,7 @@ section {
 }
 @media (min-width: 992px) {
   .join-block {
-    background: url(/dist/images/content/bg-1-desktop.png) center left;
+    background: url(../../dist/images/content/bg-1-desktop.png) center left;
     background-repeat: no-repeat;
     background-size: 43%;
     background-color: var(--00B6AB, #00b6ab);
@@ -1695,7 +1695,7 @@ section {
 .join-block__container {
   padding-top: 64px;
   padding-bottom: 64px;
-  background: url(/dist/images/content/bg-1-mobile.png) top center;
+  background: url(../../dist/images/content/bg-1-mobile.png) top center;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center 48px;
@@ -2633,7 +2633,7 @@ section {
 }
 @media (min-width: 992px) {
   .contact-us {
-    background: url(/dist/images/content/bg-1-desktop.png) center left;
+    background: url(../../dist/images/content/bg-1-desktop.png) center left;
     background-repeat: no-repeat;
     background-size: 43%;
     background-color: var(--00B6AB, #00b6ab);
@@ -2642,7 +2642,7 @@ section {
 .contact-us__container.container {
   padding-top: 64px;
   padding-bottom: 64px;
-  background: url(/dist/images/content/bg-1-mobile.png) top center;
+  background: url(../../dist/images/content/bg-1-mobile.png) top center;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center 48px;
@@ -2792,7 +2792,7 @@ section {
   content: "";
   width: 40px;
   height: 40px;
-  background: url(/dist/images/icons/checkbox.svg);
+  background: url(../../dist/images/icons/checkbox.svg);
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -2803,7 +2803,7 @@ section {
   cursor: pointer;
 }
 .contact-us__form .form__checkbox input[type=checkbox]:checked + label::before {
-  background: url(/dist/images/icons/checkbox-active.svg);
+  background: url(../../dist/images/icons/checkbox-active.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
