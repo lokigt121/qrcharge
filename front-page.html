@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>QrCharge</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+        <script defer="defer" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="/dist/css/intlTelInput.css" />
+        <script defer="defer" src="/dist/js/app.js"></script>
+        <link href="/dist/css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="header header-black">
+            <div class="header__container container">
+                <div class="header__logo">
+                    <a href="/">
+                        <img loading="lazy" src="/dist/images/logo/logo.svg" alt="logo" />
+                    </a>
+                </div>
+                <div class="header__wrap">
+                    <div class="header__langs">
+                        <a href="/" class="header__lang">
+                            <img src="/dist/images/langs/en.svg" alt="" />
+                            EN
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#222B3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="langs__wrap">
+                            <a href="/" class="header__lang">
+                                <img src="/dist/images/langs/en.svg" alt="" />
+                                English
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 12L10.1667 16L17.5 8" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                            <a href="/fr/" class="header__lang">
+                                <img src="/dist/images/langs/fr.svg" alt="" />
+                                French
+                            </a>
+                            <a href="/pl/" class="header__lang">
+                                <img src="/dist/images/langs/pl.svg" alt="" />
+                                Polski
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__menu">
+                        <a href="#about" class="menu__item">How It Works</a>
+                        <a href="#how-it-works" class="menu__item">Reviews</a>
+                        <a href="#reviews" class="menu__item">Contact Us</a>
+                    </div>
+                    <div class="header__info">
+                        <div class="info__icon">
+                            <img src="/dist/images/icons/info.svg" alt="" />
+                        </div>
+                        <div class="info__title">
+                            Stay connected <br />
+                            with QrCharge
+                        </div>
+                        <div class="info__links">
+                            <a href="mailto:qrcharge@gmail.com" class="info__link">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 4.5H4C2.89543 4.5 2 5.39543 2 6.5V18.5C2 19.6046 2.89543 20.5 4 20.5H20C21.1046 20.5 22 19.6046 22 18.5V6.5C22 5.39543 21.1046 4.5 20 4.5Z"
+                                        stroke="#00B6AB"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></path>
+                                    <path
+                                        d="M22 7.5L13.03 13.2C12.7213 13.3934 12.3643 13.496 12 13.496C11.6357 13.496 11.2787 13.3934 10.97 13.2L2 7.5"
+                                        stroke="#00B6AB"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></path>
+                                </svg>
+                                qrcharge@gmail.com
+                            </a>
+                            <a href="tel:+123 45 567 89 10" class="info__link">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17 2.5H7C5.89543 2.5 5 3.39543 5 4.5V20.5C5 21.6046 5.89543 22.5 7 22.5H17C18.1046 22.5 19 21.6046 19 20.5V4.5C19 3.39543 18.1046 2.5 17 2.5Z"
+                                        stroke="#00B6AB"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></path>
+                                    <path d="M12 18.5H12.01" stroke="#00B6AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                +123 45 567 89 10
+                            </a>
+                        </div>
+                    </div>
+                    <a class="header__btn btn btn-yellow" href="#contact-us">Get a station</a>
+                </div>
+                <div class="header__toggle">
+                    <div class="header__burger header__burger-close">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M3.94922 19.0002C3.94922 18.4203 4.41932 17.9502 4.99922 17.9502H23.9992C24.5791 17.9502 25.0492 18.4203 25.0492 19.0002C25.0492 19.5801 24.5791 20.0502 23.9992 20.0502H4.99922C4.41932 20.0502 3.94922 19.5801 3.94922 19.0002Z"
+                                fill="#121212"
+                            ></path>
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M3.94922 11.5002C3.94922 10.9203 4.41932 10.4502 4.99922 10.4502H33.4992C34.0791 10.4502 34.5492 10.9203 34.5492 11.5002C34.5492 12.0801 34.0791 12.5502 33.4992 12.5502H4.99922C4.41932 12.5502 3.94922 12.0801 3.94922 11.5002Z"
+                                fill="#121212"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="header__burger header__burger-open">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 10L10 30L30 10Z" fill="#121212"></path>
+                            <path d="M30 10L10 30" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M10 10L30 30L10 10Z" fill="#121212"></path>
+                            <path d="M10 10L30 30" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="top-block">
+                <div class="top-block__container container">
+                    <div class="top-block__grid">
+                        <h1 class="top-block__title h1">
+                            Earn Extra Income from Every Guest <br />
+                            on the French Riviera
+                        </h1>
+                        <div class="top-block__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="top-block__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/content/top-block-image-1.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="top-block__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/content/top-block-image-2.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="top-block__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/content/top-block-image-3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="top-block__description">
+                            Install a QrCharge station and profit from every power bank rental by your guests. No costs, no effort—just effortless passive income of up to several thousand euros per
+                            month.
+                        </p>
+                        <div class="top-block__list">
+                            <div class="list__item">
+                                <div class="item__icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_4829_4372" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="1" y="4" width="25" height="17">
+                                            <path d="M2 14L6 18L16.75 7.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M7.5 14L11.5 18L22.25 7.25" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M7.5 14L11.5 18L22.25 7.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </mask>
+                                        <g mask="url(#mask0_4829_4372)">
+                                            <path d="M24 0.5H0V24.5H24V0.5Z" fill="#00B6AB"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="item__text">Tax savings</div>
+                            </div>
+                            <div class="list__item">
+                                <div class="item__icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_4829_4372" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="1" y="4" width="25" height="17">
+                                            <path d="M2 14L6 18L16.75 7.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M7.5 14L11.5 18L22.25 7.25" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M7.5 14L11.5 18L22.25 7.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </mask>
+                                        <g mask="url(#mask0_4829_4372)">
+                                            <path d="M24 0.5H0V24.5H24V0.5Z" fill="#00B6AB"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="item__text">Tips increase by 100-200%</div>
+                            </div>
+                        </div>
+                        <a class="btn btn-yellow" href="#contact-us"> Get a station </a>
+                    </div>
+                    <div class="top-block__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="top-block__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/content/top-block-image-1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="top-block__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/content/top-block-image-2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="top-block__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/content/top-block-image-3.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="join-block">
+                <div class="container join-block__container">
+                    <div class="join-block__grid">
+                        <h2 class="h2 join-block__title">Join a growing network of satisfied clients!</h2>
+                        <div class="join-block__description">QrCharge - the largest power bank rental network on the French Riviera</div>
+                        <div class="join-block__image">
+                            <picture>
+                                <source media="(max-width: 991px)" srcset="/dist/images/content/join-block-image-mobile.png" />
+                                <img src="/dist/images/content/join-block-image-desktop.png" alt="" />
+                            </picture>
+                        </div>
+                        <a class="btn btn-yellow" href="#contact-us"> Join Us </a>
+                    </div>
+                    <div class="join-block__image">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="/dist/images/content/join-block-image-mobile.png" />
+                            <img src="/dist/images/content/join-block-image-desktop.png" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="locations">
+                <div class="container locations__container">
+                    <div class="locations__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-1.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-2.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-3.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-4.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-5.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-6.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-7.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-8.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="locations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <img src="/dist/images/locations/logo-9.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locations__description">
+                        and 200 <br />
+                        other locations
+                    </div>
+                </div>
+            </section>
+            <section class="interior">
+                <div class="interior__container container">
+                    <h2 class="interior__title h2">
+                        Perfectly fits <br />
+                        into the interior
+                    </h2>
+                    <div class="interior__image">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="/dist/images/content/interior-image-mobile.png" />
+                            <img src="/dist/images/content/interior-image-desktop.png" alt="" />
+                        </picture>
+                    </div>
+                    <a class="btn btn-transparent" href="#contact-us"> Find out more </a>
+                </div>
+            </section>
+            <section id="how-it-works" class="how-it-works">
+                <div class="container how-it-works__container">
+                    <div class="how-it-works__grid">
+                        <h2 class="how-it-works__title h2">How it works</h2>
+                        <div class="how-it-works__description">Watch how our power bank solution keeps guests happy and engaged at your venue.</div>
+                        <div class="how-it-works__video">
+                            <video src="/dist/video/how-it-works.mp4" autoplay="" muted="" loop=""></video>
+                        </div>
+                    </div>
+                    <div class="how-it-works__video">
+                        <video src="/dist/video/how-it-works.mp4" autoplay="" muted="" loop=""></video>
+                    </div>
+                </div>
+            </section>
+            <section class="stations">
+                <div class="stations__container container">
+                    <h2 class="stations__title h2">Our stations</h2>
+                    <div class="stations__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="stations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <picture>
+                                        <source media="(max-width: 991px)" srcset="/dist/images/stations/stations-1-mobile.png" />
+                                        <img src="/dist/images/stations/stations-1-desktop.png" alt="" />
+                                    </picture>
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__slots">6 slots</div>
+                                    <div class="slide__title">Compact station</div>
+                                    <div class="slide__description">
+                                        <p><b>Perfect for intimate spaces.</b></p>
+                                        <p>
+                                            Ideal for <b>restaurants, bars, cafés, conference rooms, and reception counters</b>. Its sleek and space-saving design makes it a great addition to venues
+                                            with limited space.
+                                        </p>
+                                    </div>
+                                    <div class="slide__list">
+                                        <div class="list__item">• Weight: 3.25KG</div>
+                                        <div class="list__item">• Dimensions: 260*243*240 mm</div>
+                                        <div class="list__item">• Electricity consumption: €0.01 per day</div>
+                                        <div class="list__item"><span class="text-color">• Сontactless payment</span></div>
+                                    </div>
+                                    <a href="#contact-us" class="btn btn-yellow">
+                                        I want a station
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.5 12L19.5 12" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 5L19.5 12L12.5 19" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="stations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <picture>
+                                        <source media="(max-width: 991px)" srcset="/dist/images/stations/stations-2-mobile.png" />
+                                        <img src="/dist/images/stations/stations-2-desktop.png" alt="" />
+                                    </picture>
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__slots">24-Slot Station</div>
+                                    <div class="slide__title">Medium-sized station</div>
+                                    <div class="slide__description">
+                                        <p><b>Designed for high-traffic areas.</b></p>
+                                        <p>
+                                            Perfect for <b>nightclubs, shopping malls, public spaces, train stations, and airports</b>. With its stylish design and LCD screen, it not only provides
+                                            charging but also serves as a dynamic advertising platform.
+                                        </p>
+                                    </div>
+                                    <div class="slide__list">
+                                        <div class="list__item">• Weight: 65KG</div>
+                                        <div class="list__item">• Dimensions: 1652 × 325 × 450 mm</div>
+                                        <div class="list__item">
+                                            • Electricity consumption: <br />
+                                            €0.06 per day
+                                        </div>
+                                    </div>
+                                    <a href="#contact-us" class="btn btn-yellow">
+                                        I want a station
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.5 12L19.5 12" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 5L19.5 12L12.5 19" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="stations__slide swiper-slide">
+                                <div class="slide__image">
+                                    <picture>
+                                        <source media="(max-width: 991px)" srcset="/dist/images/stations/stations-3-mobile.png" />
+                                        <img src="/dist/images/stations/stations-3-desktop.png" alt="" />
+                                    </picture>
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__slots">48-Slot Station</div>
+                                    <div class="slide__title">Large station</div>
+                                    <div class="slide__description">
+                                        <p><b>Maximum capacity, zero hassle.</b></p>
+                                        <p>
+                                            This <b>stand-alone, multi-purpose station</b> is ideal for <b>shopping malls, public areas, train stations, and airports</b>. It’s fully assembled and
+                                            ready to use straight out of the box. The premium LCD screen offers additional branding and advertising opportunities.
+                                        </p>
+                                    </div>
+                                    <div class="slide__list">
+                                        <div class="list__item">• Weight: 90KG</div>
+                                        <div class="list__item">• Dimensions: 1981 × 735 × 400 mm</div>
+                                        <div class="list__item">
+                                            • E Electricity consumption: <br />
+                                            €0.14 per day
+                                        </div>
+                                    </div>
+                                    <a href="#contact-us" class="btn btn-yellow">
+                                        I want a station
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.5 12L19.5 12" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5 5L19.5 12L12.5 19" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-navigation">
+                            <div class="swiper-navigation__prev">
+                                <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M33.2968 44.2832C33.6328 44.2832 33.9766 44.1504 34.2344 43.8926C34.75 43.377 34.75 42.5332 34.2344 42.0176L16.5859 24.3691L33.9766 6.97852C34.4922 6.46289 34.4922 5.61914 33.9766 5.10352C33.4609 4.58789 32.6172 4.58789 32.1016 5.10352L13.7656 23.4316C13.25 23.9473 13.25 24.791 13.7656 25.3066L32.3516 43.8926C32.6172 44.1582 32.9531 44.2832 33.2968 44.2832Z"
+                                        fill="#848896"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="swiper-navigation__next">
+                                <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.7032 4.7168C14.3672 4.7168 14.0234 4.84961 13.7656 5.10742C13.25 5.62305 13.25 6.4668 13.7656 6.98242L31.4141 24.6309L14.0234 42.0215C13.5078 42.5371 13.5078 43.3809 14.0234 43.8965C14.5391 44.4121 15.3828 44.4121 15.8984 43.8965L34.2344 25.5684C34.75 25.0527 34.75 24.209 34.2344 23.6934L15.6484 5.10742C15.3828 4.8418 15.0469 4.7168 14.7032 4.7168Z"
+                                        fill="#848896"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="why-need-this">
+                <div class="container why-need-this__container">
+                    <div class="why-need-this__column">
+                        <h2 class="why-need-this__title h2">
+                            Why Your Venue <br />
+                            Needs This
+                        </h2>
+                        <div class="why-need-this__description">
+                            During the extra time spent in your restaurant or café, customers are more likely to place additional orders, increasing your average check.
+                        </div>
+                    </div>
+                    <div class="why-need-this__column">
+                        <div class="why-need-this__grid">
+                            <div class="grid__item">
+                                <div class="item__number">1</div>
+                                <div class="item__title">Simple Setup</div>
+                                <div class="item__description">All you need to do is submit a request, and our team will deliver, install, and maintain the station for you.</div>
+                            </div>
+                            <div class="grid__item">
+                                <div class="item__number">2</div>
+                                <div class="item__title">Gain Visibility and Happy Customers</div>
+                                <div class="item__description">
+                                    By joining our network, your venue will be listed on our map, making it easier for customers to find you. They'll appreciate the convenience of charging their
+                                    phones while they’re at your venue.
+                                </div>
+                            </div>
+                            <div class="grid__item">
+                                <div class="item__number">3</div>
+                                <div class="item__title">Generate Daily Income</div>
+                                <div class="item__description">Earn extra revenue every day from the station—it's a hassle-free way to boost your income!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-yellow" href="#contact-us"> Try it </a>
+                </div>
+            </section>
+            <section class="promo-block">
+                <div class="promo-block__container container">
+                    <div class="promo-block__image">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="/dist/images/content/promo-block-image-mobile.png" />
+                            <img src="/dist/images/content/promo-block-image-desktop.png" alt="" />
+                        </picture>
+                    </div>
+                    <div class="promo-block__description">
+                        Each power bank comes with three cables, so your visitors can charge any device without needing to bring their own.
+                        <img src="/dist/images/logo/logo-white.svg" alt="" />
+                    </div>
+                </div>
+            </section>
+            <section class="why">
+                <div class="container why__container">
+                    <h2 class="h2 why__title">Why QrCharge?</h2>
+                    <div class="why__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="why__slide swiper-slide">
+                                <div class="slide__icon">
+                                    <img src="/dist/images/content/why-1.png" alt="" />
+                                </div>
+                                <div class="slide__title">
+                                    We work only with <br />
+                                    the premium segment
+                                </div>
+                                <div class="slide__description">We provide top-quality service and help increase your average check by installing our stations in your venue.</div>
+                            </div>
+                            <div class="why__slide swiper-slide">
+                                <div class="slide__icon">
+                                    <img src="/dist/images/content/why-2.png" alt="" />
+                                </div>
+                                <div class="slide__title">No worries - we handle everything for you</div>
+                                <div class="slide__description">From installation to maintenance, we take care of everything. Just give your consent, and we’ll set up the station in no time.</div>
+                            </div>
+                            <div class="why__slide swiper-slide">
+                                <div class="slide__icon">
+                                    <img src="/dist/images/content/why-3.png" alt="" />
+                                </div>
+                                <div class="slide__title">
+                                    Easy and hassle-free <br />
+                                    for your guests
+                                </div>
+                                <div class="slide__description">
+                                    Our app is simple to use for renting power banks, and all payments are contactless, ensuring a smooth experience for your customers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <a class="btn btn-yellow" href="#contact-us"> Become a partner </a>
+                </div>
+            </section>
+            <section id="reviews" class="reviews">
+                <div class="container reviews__container">
+                    <div class="reviews__wrap">
+                        <div class="reviews__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/reviews/review-1.png" alt="" />
+                                    </div>
+                                    <div class="slide__info">
+                                        <div class="slide__title">What they say about us</div>
+                                        <div class="slide__rate">
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                        </div>
+                                        <div class="slide__text">
+                                            Since the addition of the charging station, we've seen a clear increase in customer engagement. People spend more time in our venue, which naturally leads
+                                            to increased revenue. It’s a highly effective and worthwhile investment for any hospitality business.
+                                        </div>
+                                        <div class="slide__name">Thomas Lefevre</div>
+                                        <div class="slide__position">General Manager</div>
+                                    </div>
+                                </div>
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/reviews/review-2.png" alt="" />
+                                    </div>
+                                    <div class="slide__info">
+                                        <div class="slide__title">What they say about us</div>
+                                        <div class="slide__rate">
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                        </div>
+                                        <div class="slide__text">
+                                            Installing the charging station was a game-changer for our café. We've seen customers stay longer, place more orders, and genuinely appreciate the added
+                                            convenience. It's a simple yet effective solution that significantly enhanced our customer satisfaction.
+                                        </div>
+                                        <div class="slide__name">Sophie Martin</div>
+                                        <div class="slide__position">Manager</div>
+                                    </div>
+                                </div>
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/reviews/review-3.png" alt="" />
+                                    </div>
+                                    <div class="slide__info">
+                                        <div class="slide__title">What they say about us</div>
+                                        <div class="slide__rate">
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                        </div>
+                                        <div class="slide__text">
+                                            Our guests love having a place to charge their phones while enjoying their meal. It’s a perfect way to attract new customers and offer extra comfort to our
+                                            regulars. The installation process was smooth and seamless, with no disruption to our daily operations.
+                                        </div>
+                                        <div class="slide__name">Claire Dupont</div>
+                                        <div class="slide__position">Owner</div>
+                                    </div>
+                                </div>
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="slide__image">
+                                        <img src="/dist/images/reviews/review-4.png" alt="" />
+                                    </div>
+                                    <div class="slide__info">
+                                        <div class="slide__title">What they say about us</div>
+                                        <div class="slide__rate">
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                            <img src="/dist/images/icons/star.svg" alt="" />
+                                        </div>
+                                        <div class="slide__text">
+                                            Our bar has become a go-to spot for young professionals and travelers who need a quick charge. The station integrates seamlessly into our ambiance, and
+                                            we’ve gained new customers thanks to our listing on the service map. It’s a win-win for us.
+                                        </div>
+                                        <div class="slide__name">Antoine Bernard</div>
+                                        <div class="slide__position">Bar Owner</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-navigation">
+                                <div class="swiper-navigation__prev">
+                                    <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M33.2968 44.2832C33.6328 44.2832 33.9766 44.1504 34.2344 43.8926C34.75 43.377 34.75 42.5332 34.2344 42.0176L16.5859 24.3691L33.9766 6.97852C34.4922 6.46289 34.4922 5.61914 33.9766 5.10352C33.4609 4.58789 32.6172 4.58789 32.1016 5.10352L13.7656 23.4316C13.25 23.9473 13.25 24.791 13.7656 25.3066L32.3516 43.8926C32.6172 44.1582 32.9531 44.2832 33.2968 44.2832Z"
+                                            fill="#848896"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div class="swiper-navigation__next">
+                                    <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.7032 4.7168C14.3672 4.7168 14.0234 4.84961 13.7656 5.10742C13.25 5.62305 13.25 6.4668 13.7656 6.98242L31.4141 24.6309L14.0234 42.0215C13.5078 42.5371 13.5078 43.3809 14.0234 43.8965C14.5391 44.4121 15.3828 44.4121 15.8984 43.8965L34.2344 25.5684C34.75 25.0527 34.75 24.209 34.2344 23.6934L15.6484 5.10742C15.3828 4.8418 15.0469 4.7168 14.7032 4.7168Z"
+                                            fill="#848896"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact-us" class="contact-us">
+                <div class="contact-us__container container">
+                    <div class="contact-us__column">
+                        <h2 class="contact-us__title h2">Get a power boost for your business!</h2>
+                        <div class="contact-us__description">Complete an application to install a charging station at your location and we'll get back to you with details.</div>
+                        <a href="mailto:info@qrcharge.eu" class="contact-us__email">
+                            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M26.667 6.05176H5.33366C3.8609 6.05176 2.66699 7.24566 2.66699 8.71842V24.7184C2.66699 26.1912 3.8609 27.3851 5.33366 27.3851H26.667C28.1398 27.3851 29.3337 26.1912 29.3337 24.7184V8.71842C29.3337 7.24566 28.1398 6.05176 26.667 6.05176Z"
+                                    stroke="#FFED74"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path>
+                                <path
+                                    d="M29.3337 10.0518L17.3737 17.6518C16.962 17.9097 16.4861 18.0464 16.0003 18.0464C15.5146 18.0464 15.0386 17.9097 14.627 17.6518L2.66699 10.0518"
+                                    stroke="#FFED74"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path>
+                            </svg>
+                            info@qrcharge.eu
+                        </a>
+                    </div>
+                    <div class="contact-us__column">
+                        <form action="" class="contact-us__form">
+                            <label for="name">Name</label>
+                            <input id="name" required="" placeholder="Enter your name" />
+                            <label for="tel">Phone</label>
+                            <input type="tel" name="" id="tel" required="" class="input-phone" />
+                            <div class="form__subtitle">Choose the appropriate way to contact you:</div>
+                            <div class="form__radio-wrap">
+                                <div class="form__radio">
+                                    <input type="radio" name="way" id="way-phone" value="phone" checked="" />
+                                    <label for="way-phone">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.25 12C0.25 18.6274 5.62258 24 12.25 24C18.8774 24 24.25 18.6274 24.25 12C24.25 5.37258 18.8774 0 12.25 0C5.62258 0 0.25 5.37258 0.25 12Z"
+                                                fill="#F4DE49"
+                                            ></path>
+                                            <path
+                                                d="M11.9553 9.98668L10.8526 10.976C10.9984 11.4749 11.202 11.9551 11.4593 12.4067C11.7277 12.855 12.0511 13.268 12.422 13.636L13.85 13.196C14.65 12.9493 15.5233 13.2027 16.0553 13.836L16.8686 14.804C17.1979 15.1926 17.363 15.6941 17.3289 16.2024C17.2948 16.7106 17.0642 17.1856 16.686 17.5267C15.3593 18.7373 13.3166 19.1467 11.7873 17.9453C10.4426 16.8877 9.30521 15.5903 8.43262 14.1187C7.55782 12.6543 6.97212 11.0357 6.70729 9.35068C6.41396 7.45468 7.80196 5.93734 9.53262 5.42001C10.5646 5.11068 11.666 5.64134 12.0446 6.63068L12.4913 7.79734C12.7846 8.56534 12.574 9.43201 11.9553 9.98668Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+
+                                        Phone call
+                                    </label>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" name="way" id="way-whatsapp" value="whatsapp" />
+                                    <label for="way-whatsapp">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.75 12C0.75 18.6274 6.12258 24 12.75 24C19.3774 24 24.75 18.6274 24.75 12C24.75 5.37258 19.3774 0 12.75 0C6.12258 0 0.75 5.37258 0.75 12Z"
+                                                fill="#25D366"
+                                            ></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M16.95 7.725C15.825 6.6 14.325 6 12.75 6C9.45 6 6.75 8.7 6.75 12C6.75 13.05 7.05 14.1 7.575 15L6.75 18L9.90001 17.175C10.8 17.625 11.775 17.925 12.75 17.925C16.05 17.925 18.75 15.225 18.75 11.925C18.75 10.35 18.075 8.85 16.95 7.725ZM12.75 16.95C11.85 16.95 10.95 16.725 10.2 16.275L10.05 16.2L8.175 16.725L8.7 14.925L8.55 14.7C8.025 13.875 7.8 12.975 7.8 12.075C7.8 9.375 10.05 7.125 12.75 7.125C14.1 7.125 15.3 7.65 16.275 8.55C17.25 9.525 17.7 10.725 17.7 12.075C17.7 14.7 15.525 16.95 12.75 16.95ZM15.45 13.2C15.3 13.125 14.55 12.75 14.4 12.75C14.25 12.675 14.175 12.675 14.1 12.825C14.025 12.975 13.725 13.275 13.65 13.425C13.575 13.5 13.5 13.5 13.35 13.5C13.2 13.425 12.75 13.275 12.15 12.75C11.7 12.375 11.4 11.85 11.325 11.7C11.25 11.55 11.325 11.475 11.4 11.4C11.475 11.325 11.55 11.25 11.625 11.175C11.7 11.1 11.7 11.025 11.775 10.95C11.85 10.875 11.775 10.8 11.775 10.725C11.775 10.65 11.475 9.9 11.325 9.6C11.25 9.375 11.1 9.375 11.025 9.375C10.95 9.375 10.875 9.375 10.725 9.375C10.65 9.375 10.5 9.375 10.35 9.525C10.2 9.675 9.825 10.05 9.825 10.8C9.825 11.55 10.35 12.225 10.425 12.375C10.5 12.45 11.475 14.025 12.975 14.625C14.25 15.15 14.475 15 14.775 15C15.075 15 15.675 14.625 15.75 14.325C15.9 13.95 15.9 13.65 15.825 13.65C15.75 13.275 15.6 13.275 15.45 13.2Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                        WhatsApp
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__checkbox">
+                                <input type="checkbox" name="approve" id="approve" required="" />
+                                <label for="approve">I agree to QrCharge Terms and Conditions</label>
+                            </div>
+                            <button class="btn btn-yellow" type="submit">Contact me</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="faq" class="faq">
+                <div class="faq__container container">
+                    <h2 class="faq__title h2">FAQ</h2>
+                    <div class="faq__grid">
+                        <details>
+                            <summary>
+                                <div class="item__title">How does the charging station work at my venue?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                Your customers can easily rent a power bank by scanning the QR code at the station using the QrCharge app or their phone camera. They can pay either through the app or
+                                simply tap their card or phone on the terminal at the station using Apple Pay, Google Pay, or any contactless payment method. The power banks come with built-in cables
+                                for Android, iPhone, and Type-C devices, ensuring that guests can charge any phone on the go. Once they’re done, they can return the power bank to any QrCharge station.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">Who handles the maintenance and repair of the stations?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                We take full responsibility for the operation and maintenance of the stations. Our team ensures that the stations are always in top condition with regular maintenance
+                                and remote monitoring to prevent any technical issues. If any issue arises, we take care of it swiftly.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">How quickly will issues with the station or power bank be resolved?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                Our technical specialists are always available to assist your venue. If any problem occurs, our team will come to your location promptly to repair the station or power
+                                bank, ensuring minimal disruption to your service.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">How many charging stations are recommended for my venue?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                The number of stations you need depends on the size and layout of your venue. We assess each location individually and provide recommendations based on our experience
+                                to ensure optimal convenience for your customers.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">Do you provide the necessary equipment for the station installation?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                Yes, we provide everything you need. All we require from you is a power outlet, and we’ll take care of the installation, including any necessary extension cords. You
+                                won’t need to worry about a thing.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">Will the charging station attract more customers to my venue?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                Yes, offering free or affordable phone charging can be a great way to attract new customers. Your venue will be listed on the QrCharge map, making it visible to
+                                thousands of potential customers looking for a convenient place to charge their devices.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">Is the station easy to use for my staff and customers?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                Yes, the stations are designed to be intuitive and easy to use. Your customers can quickly rent a power bank either by scanning the QR code with their phone or simply
+                                tapping their card or phone on the terminal using Apple Pay, Google Pay, or any contactless payment method. There’s no need for your staff to manage the rentals—they
+                                can focus on providing excellent service.
+                            </div>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="item__title">Can I track how many people are using the charging station?</div>
+                                <div class="item__icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M20 13V27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="item__icon icon-active">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#E1E7FB"></rect>
+                                        <path d="M13 20H27" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="content">
+                                Yes, our platform provides detailed analytics, so you can track how often the station is used, how much revenue it’s generating, and even customer feedback. This allows
+                                you to make informed decisions about your service offerings.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__logo">
+                    <img src="/dist/images/logo/logo.svg" alt="" />
+                </div>
+                <div class="footer__copyright">Copyright 2023 QRCharge</div>
+                <div class="footer__menu">
+                    <a href="#" class="menu__link">Privacy Policy & Cookie</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/dist/js/intlTelInput.min.js"></script>
+        <script>
+            const input = document.querySelector('.input-phone')
+            window.intlTelInput(input, {
+                initialCountry: 'fr',
+                loadUtils: () => import('/dist/js/utils.js'),
+            })
+        </script>
+    </body>
+</html>
