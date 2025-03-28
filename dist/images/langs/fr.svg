@@ -1,9 +1,10 @@
-<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="24" height="16" rx="4" fill="url(#pattern0_203_4735)"/>
-<defs>
-<pattern id="pattern0_203_4735" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_203_4735" transform="matrix(0.00385356 0 0 0.00578035 -0.000963391 0)"/>
-</pattern>
-<image id="image0_203_4735" width="260" height="173" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAACtCAIAAADZDpbPAAAEJklEQVR4Ae3c203rUBRFUbeQ3xTgcvhKNUSpgcpIBfQC8uMknqIEjyukSwOLsadNmKb5duqv68fn4+v39P9+7o/v6fq8zGf+mk69hPk2GcP6g8AYnpfZGMiwrMEYjIEM+4FoDMZgDMbwziRnkjPJmbTvwRiMwRiMYXum7GnSeihpBs2gGTSDZni9aiQDGcarRs2gGTSDZtAM+4lkDMZgDMYwDqTtN7KcSc4kMpCBDGQgQ35R19OkdRLeM3jP4D3DroMxGIMxGIOXbl66HYLB5xk8TVo/76oZNMPIaI9WPVpd1qAZNINm0AyaQTNohnEdvf4giDPJmeRM8gbaG+gDDppBM2gGzaAZNMOBBU+TvGfwnuE9CGeSM8mZ5ExyJjmT3ios35GBDGQgAxnIQAYv3fLJHn+SfkzCmeRMciY5k5xJzqRhwvY/GchABjKQgQxkENACuisgAxnI0E1oBs2gGchABjKQQTNohq6ADGQgQzehGTSDZiADGchABs2gGboCMpCBDN2EZtAMmoEMZCADGTSDZugKyEAGMnQTmkEzaAYykIEMZNAMmqErIAMZyNBNaAbNoBnIQAYykEEzaIaugAxkIEM3oRk0g2YgAxnIQAbNoBm6AjKQgQzdhGbQDJqBDGQgAxk0g2boCshABjJ0E5pBM2gGMpCBDGTQDJqhKyADGcjQTWgGzaAZyEAGMpBBM2iGroAMZCBDN6EZNINmIAMZyEAGzaAZugIykIEM3YRm0AyagQxkIAMZNINm6ArIQAYydBOaQTNoBjKQgQxk0AyaoSsgAxnI0E1oBs2gGchABjKQQTNohq6ADGQgQzehGTSDZiADGchABs2gGboCMpCBDN2EZtAMmoEMZCADGTSDZugKyEAGMnQTmkEzaAYykIEMZNAMmqErIAMZyNBNaAbNoBnIQAYykEEzaIaugAxkIEM3oRk0g2YgAxnIQAbNoBm6AjKQgQzdhGbQDJqBDGQgAxk0g2boCshABjJ0E5pBM2gGMpCBDGTQDJqhKyADGcjQTWgGzaAZyEAGMpBBM2iGroAMZCBDN6EZNINmIAMZyEAGzaAZugIykIEM3YRm0AyagQxkIAMZNINm6ArIQAYydBOaQTNoBjKQgQxk0AyaoSsgAxnI0E1oBs2gGchABjKQQTNohq6ADGQgQzehGTSDZiADGchABs2gGboCMpCBDN2EZtAMmoEMZCADGTSDZugKyEAGMnQTmkEzaAYykIEMZNAMmqErIAMZyNBNaAbNoBnIQAYykEEzaIaugAxkIEM3oRk0g2YgAxnIQAbNoBm6AjKQgQzdhGbQDJqBDGQgAxk0g2boCshABjJ0E5pBM2gGMpCBDGTQDJqhKyADGcjQTWgGzaAZyEAGMpBBM2iGroAMZCBDN6EZNINmIAMZyECGf83wBxBu0UXCbXX4AAAAAElFTkSuQmCC"/>
-</defs>
+<svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.25" y="0.25" width="31.5" height="23.5" rx="1.75" fill="white" stroke="#E9EFF6" stroke-width="0.5"/>
+<mask id="mask0_2988_8621" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="24">
+<rect x="0.25" y="0.25" width="31.5" height="23.5" rx="1.75" fill="white" stroke="white" stroke-width="0.5"/>
+</mask>
+<g mask="url(#mask0_2988_8621)">
+<rect x="21.3335" width="10.6667" height="24" fill="#F44653"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 24H10.6667V0H0V24Z" fill="#1035BB"/>
+</g>
 </svg>

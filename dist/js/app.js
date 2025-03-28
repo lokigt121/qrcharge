@@ -209,33 +209,6 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).parent().toggleClass('active');
   });
-  $('.contact__toggle').on('click', function (e) {
-    e.preventDefault();
-    $('.contact__popup').addClass('active');
-  });
-  $(document).mouseup(function (e) {
-    if ($('.contact__popup').hasClass('active') && ($('.contact__popup').is(e.target) && $('.contact__popup').has(e.target).length === 0 || $('.contact__popup .popup__close').is(e.target) || $('.contact__popup .popup__close').has(e.target).length != 0 || $('.contact__popup .popup__apply').is(e.target) || $('.contact__popup .popup__apply').has(e.target).length != 0)) {
-      $('.contact__popup').removeClass('active');
-    }
-  });
-  $('.contact-send__toggle').on('click', function (e) {
-    e.preventDefault();
-    $('.contact__popup-send').addClass('active');
-  });
-  $(document).mouseup(function (e) {
-    if ($('.contact__popup-send').hasClass('active') && ($('.contact__popup-send').is(e.target) && $('.contact__popup-send').has(e.target).length === 0 || $('.contact__popup-send .popup__close').is(e.target) || $('.contact__popup-send .popup__close').has(e.target).length != 0 || $('.contact__popup-send .popup__apply').is(e.target) || $('.contact__popup-send .popup__apply').has(e.target).length != 0)) {
-      $('.contact__popup-send').removeClass('active');
-    }
-  });
-  $('.cookies__toggle').on('click', function (e) {
-    e.preventDefault();
-    $('.cookies__popup').addClass('active');
-  });
-  $(document).mouseup(function (e) {
-    if ($('.cookies__popup').hasClass('active') && ($('.cookies__popup').is(e.target) && $('.cookies__popup').has(e.target).length === 0 || $('.cookies__popup .popup__close').is(e.target) || $('.cookies__popup .popup__close').has(e.target).length != 0 || $('.cookies__popup .popup__apply').is(e.target) || $('.cookies__popup .popup__apply').has(e.target).length != 0)) {
-      $('.cookies__popup').removeClass('active');
-    }
-  });
   var topBlockSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.top-block__slider', {
     loop: false,
     grabCursor: true,
@@ -331,40 +304,9 @@ $(document).ready(function () {
     },
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]
   });
-});
-function setCookie(name, value, days) {
-  var date = new Date();
-  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-  var expires = 'expires=' + date.toUTCString();
-  document.cookie = name + '=' + value + ';' + expires + ';path=/';
-}
-function getCookie(name) {
-  var nameEQ = name + '=';
-  var ca = document.cookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') c = c.substring(1);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-  }
-  return null;
-}
-document.querySelector('input').addEventListener('click', function (event) {
-  event.stopPropagation();
-});
-window.addEventListener('load', function () {
-  var cookiePanel = document.getElementsByClassName('cookies')[0];
-  var acceptedCookies = getCookie('acceptedCookies');
-  if (!acceptedCookies) {
-    cookiePanel.style.display = 'block';
-  }
-});
-var acceptButtons = document.querySelectorAll('.accept-cookies');
-acceptButtons.forEach(function (button) {
-  button.addEventListener('click', function () {
-    setCookie('acceptedCookies', 'true', 365);
-    document.querySelectorAll('.cookies').forEach(function (cookieBanner) {
-      cookieBanner.style.display = 'none';
-    });
+  $('.btn').click(function () {
+    header.removeClass('mobile-menu-active');
+    $('body').removeClass('mobile-menu-active');
   });
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -385,23 +327,12 @@ document.addEventListener('DOMContentLoaded', function () {
     input.addEventListener('change', checkInputs);
   });
   checkInputs();
-  var formPopup = document.querySelector('.contact__form');
-  var submitButtonPopup = formPopup.querySelector("button[type='submit']");
-  var inputsPopup = formPopup.querySelectorAll('input[required]');
-  function checkInputsPopup() {
-    var allFilled = Array.from(inputsPopup).every(function (input) {
-      if (input.type === 'checkbox') {
-        return input.checked;
-      }
-      return input.value.trim() !== '';
-    });
-    submitButtonPopup.disabled = !allFilled;
-  }
-  inputsPopup.forEach(function (input) {
-    input.addEventListener('input', checkInputsPopup);
-    input.addEventListener('change', checkInputsPopup);
+});
+document.addEventListener('DOMContentLoaded', function () {
+  var video = document.querySelector('video');
+  video.play()["catch"](function (e) {
+    return console.log('Автовоспроизведение заблокировано:', e);
   });
-  checkInputsPopup();
 });
 
 /***/ }),
